@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+<meta charset="utf-8">
+  	 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+	 <script type="text/javascript" src="jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+	 <link rel="stylesheet" type="text/css" href="Master.css">
+	 
+<style>
+.dr{
+color:white;
+}
+form{
+	margin:auto;
+	background:#fff;
+	display:flex;
+	flex-direction:column;
+	padding:2vw 4vw;
+	width:90%;
+	max-width:600px;
+	border-radius:10px;
+
+}
+form input, form textarea{
+	
+	border:0px;
+	margin:10px 0 ;
+	padding:20px;
+	outline:none;
+	background:#f5f5f5;
+	font-size:16px;
+
+}
+form button:hover{
+
+	background:transparent;
+	transition:1s;
+
+}
+
+</style>
+</head>
+<body>
+<!-- nav bar -->
+	
+	<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class=" AB container-fluid">
+    <a class="navbar-brand" href="#"><h1 style="font-style:;color:#cd853f; margin-left:15px;
+	text-shadow:5px 6px 5px #9a7b4f; font-size:">Persnol Portfolio</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color:red;">WANT TO KNOW MORE </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="MY SElf.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">ABOUT</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dr dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#" style="color:white;">Portfolio</a></li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="contact1.html" style="color:white;">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+	
+<br>
+<br>
+
+<div id="CONTACT" class="container1">
+			<div class="contact1" style="border:  #77b300; border-radius: 20px; text-align:center; margin-top:42px;">
+				
+
+	
+		<div class="container">
+			<div class="contact" style="border:3px solid  #77b300; border-radius: 20px;">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<h3 style="text-align: center; padding-top: 15px; color:red; "> WANT TO KNOW MORE ?</h3><br>
+					</div><br><br>
+
+					<div onsubmit="sendEmail(); reset();return false;" 
+					class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 mx-auto">
+						<form action="https://formsubmit.co/bharukadam2000@gmail.com" method="POST" >
+							
+						<input type="text" id="name" placeholder="Your Name" required>	
+						<input type="email" id="email" placeholder="email id" required>	
+						<input type="text" id="phone" placeholder="phone no." required>	
+						<textarea id="message" rows="4" placeholder="How can we help you ?" ></textarea>
+						<button type="submit" style="background:green; border-radius:20px;">send</button>
+							
+						</form>
+					</div>
+				</div>		
+			</div>
+			
+		</div>
+		
+ 
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+			function sendEmail(){
+			
+			Email.send({
+			Host : "smtp.gmail.com",
+			Username : "lbenterprises3013@gmail.com",
+			Password : "9594963476",
+			To : 'lbenterprises3013@gmail.com',
+			From : document.getElementById("email").value,
+			Subject : "New Contact Form Enquiry",
+			Body : "Name:"+document.getElementById("name").value
+			+"<br> Email"+document.getElementById("Email").value
+			+"<br> phone"+document.getElementById("phone").value
+			+"<br> message"+document.getElementById("message").value
+			}).then(
+			message => alert(message send succesfully)
+			);
+
+			
+			}
+	
+	
+	</script>
+</div>	
+</div>		
+	
+ <!-- footer -->
+
+<footer class="bg-dark">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<h4 style="color:pink ; text-align:center">@ 2023 . All Copy Rights Reserved. </h4>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+
+
+
+</html>
